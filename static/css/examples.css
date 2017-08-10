@@ -1,0 +1,34 @@
+body {
+  padding: 20px 100px;
+}
+.big {
+  font-size: 24px;
+}
+div.section {
+  margin-bottom: 20px;
+}
+span {
+  padding: 0 5px; 
+  font-weight: bold;
+  font-size: 24px;
+}
+.blue {
+  color: #0099ff;
+}
+.color_special {
+  color: #f35cbb;
+}
+.no {
+  background-color: #f88;
+}
+.yes {
+  background-color: #8f8;
+}
+input {
+  padding: 3px 5px;
+/* border-radius: 3px;*/
+}
+.fixed {
+  font-family: 'Andale', sans-serif;
+  font-size: 24px;
+}

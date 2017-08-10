@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2017 Jay Kelkar <jkelkar@gmail.com> -->
+  <!-- Free to use in any form -->
+  <!-- Shadowing Attributes -->
+  <head>
+    <meta charset="utf-8">
+    <title>Example 1</title>    
+    <script src="http://localhost:8080/node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" 
+        href="http://localhost:8080/static/css/examples.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h2>Shadowing attributes in the instance - in console</h2>
+    </div>
+
+    <script>
+      var data = {
+        tested: false,
+        testcase: 23
+      }
+      var app = new Vue({
+        el: '#app',
+        data: data
+      })
+
+      console.log('d: data.tested === app.tested -> ', data.tested === app.tested)
+    </script>
+  </body>
+</html>

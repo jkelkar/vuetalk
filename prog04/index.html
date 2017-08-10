@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2017 Jay Kelkar <jkelkar@gmail.com> -->
+  <!-- Free to use in any form -->
+  <head>
+    <meta charset="utf-8">
+    <title>Example 1</title>    
+    <script src="http://localhost:8080/node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" 
+        href="http://localhost:8080/static/css/examples.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h2>Other input elements with v-model</h2>
+      <div class="section">
+        <h4>Is this To GO?</h4>
+        <input type="checkbox" v-model="status" id="togo">
+        <label for="togo"> To Go?</label>
+        <div class="blue big">To Go: <span class="color_special">{{ status ? 'Yes' : 'No'}}</span></div>
+      </div>
+      <div>
+        <h4>Main Items</h4>
+        <input type="checkbox" id="burger" value="Burger" v-model="foodOrder">
+        <label for="burger">Burger</label>
+        <input type="checkbox" id="fries" value="Fries" v-model="foodOrder">
+        <label for="fries">Fries</label>
+        <input type="checkbox" id="chicken" value="Chicken" v-model="foodOrder">
+        <label for="chicken">Chicken</label>
+        <div class="big blue">Checked names: <span class="color_special">{{ foodOrder }}</span></div>
+      </div>
+      <div>
+        <h4>Choice of Ice Cream</h4>
+        <input type="radio" id="vanilla" value="Vanilla" v-model="icecream">
+        <label for="vanilla">Vanilla</label>
+        <br>
+        <input type="radio" id="strawberry" value="Strawberry" v-model="icecream">
+        <label for="strawberry">Strawberry</label>
+        <br>
+        <input type="radio" id="chocolate" value="Chocolate" v-model="icecream">
+        <label for="chocolate">Chocolate</label>
+        <br>
+        <div class="big blue">Icecream choice: <span class="color_special">{{ icecream }}</span></div>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          status: false,
+          foodOrder: [],
+          icecream: ''
+        }
+      })
+    </script>
+  </body>
+</html>

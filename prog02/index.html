@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2017 Jay Kelkar <jkelkar@gmail.com> -->
+  <!-- Free to use in any form -->
+  <head>
+    <meta charset="utf-8">
+    <title>Example 1</title>    
+    <script src="http://localhost:8080/node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" 
+        href="http://localhost:8080/static/css/examples.css" />   
+  </head>
+  <body>
+    <div id="app">
+      <h2>Input mapped to output</h2>
+      <input class="big" v-model="greeting"><br><br>
+      <div class="blue big">{{ greeting }}</div>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          greeting: 'Hello friends!'
+        }
+      })
+    </script>
+  </body>
+</html>

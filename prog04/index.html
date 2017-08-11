@@ -4,7 +4,7 @@
   <!-- Free to use in any form -->
   <head>
     <meta charset="utf-8">
-    <title>Example 1</title>    
+    <title>Reactive inputs - 04</title>    
     <script src="http://localhost:8080/node_modules/vue/dist/vue.js"></script>
     <link rel="stylesheet" type="text/css" 
         href="http://localhost:8080/static/css/examples.css" />
@@ -12,12 +12,7 @@
   <body>
     <div id="app">
       <h2>Other input elements with v-model</h2>
-      <div class="section">
-        <h4>Is this To GO?</h4>
-        <input type="checkbox" v-model="status" id="togo">
-        <label for="togo"> To Go?</label>
-        <div class="blue big">To Go: <span class="color_special">{{ status ? 'Yes' : 'No'}}</span></div>
-      </div>
+      <h2>Fast Food Self Order Station</h2>
       <div>
         <h4>Main Items</h4>
         <input type="checkbox" id="burger" value="Burger" v-model="foodOrder">
@@ -39,7 +34,26 @@
         <input type="radio" id="chocolate" value="Chocolate" v-model="icecream">
         <label for="chocolate">Chocolate</label>
         <br>
-        <div class="big blue">Icecream choice: <span class="color_special">{{ icecream }}</span></div>
+        <div class="big blue" >Ice cream choice: <span class="color_special">{{ icecream }}</span></div>
+      </div>
+       <div class="section">
+        <h4>Is this To GO?</h4>
+        <input type="checkbox" v-model="status" id="togo">
+        <label for="togo"> To Go?</label>
+        <div class="blue big">To Go: <span class="color_special">{{ status ? 'Yes' : 'No'}}</span></div>
+      </div>
+      <div class="bordered">
+        <h2 >Fast Food Order:</h2>
+        <h3  v-if="foodOrder.length > 0">Items:</h3>
+        <div v-for="food in foodOrder">
+          <span class="color_special">{{ food }}</span>
+        </div><br >
+        <div v-if="icecream">
+          <span :class="[icecream]">{{ icecream }} </span> ice cream
+        </div>
+        <div v-if="status">
+          This order is <span class="color_special">To Go</span>
+        </div>
       </div>
     </div>
     <script>

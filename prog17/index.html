@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2017 Jay Kelkar <jkelkar@gmail.com> -->
+  <!-- Free to use in any form -->
+  <head>
+    <meta charset="utf-8">
+    <title>component composition - 17</title>    
+    <script src="http://localhost:8080/node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" 
+        href="http://localhost:8080/static/css/examples.css" />
+  </head>
+  <body>
+    <div id="app">
+      <page></page>
+    </div>
+
+    <script>
+      Vue.component('page', {
+        data () {
+          return {
+            clicked: false
+          }
+        },
+        template: `<div>
+          <div style="width: 400px; height: 300px;" 
+            :class="{'red': clicked, 'black': !clicked}" @click="toggleCSS">
+            This is some stuff in the div
+          </div>
+        </div>`,
+        methods: {
+          toggleCSS: function () {
+            this.clicked = !this.clicked
+          }
+        }
+      })
+
+      // Vue.component('', {
+      //   
+      // })
+
+      // Vue.component('', {
+      //   
+      // })
+
+      // Vue.component('', {
+      //   
+      // })
+
+      var app = new Vue({
+        el: '#app',
+        data: {
+        
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -16,7 +16,26 @@ span {
   color: #0099ff;
 }
 .color_special {
-  color: #f35cbb;
+  color: hotpink;
+}
+div.black {
+background-color: #eee;
+}
+div.red {
+  background-color: #fcc;
+}
+div.bordered {
+  border: 1px solid #999;
+  width: 400px;
+}
+.Vanilla {
+  color: #fc4;
+}
+.Chocolate {
+  color: chocolate;
+}
+.Strawberry {
+  color: #f33;
 }
 .no {
   background-color: #f88;

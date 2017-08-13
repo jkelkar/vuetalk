@@ -28,6 +28,35 @@ div.bordered {
   border: 1px solid #999;
   width: 400px;
 }
+div.normal {
+  border: 1px solid white;
+  padding: 3px;
+}
+div.right {
+  border: 1px solid #0b0;
+  padding: 3px;
+}
+div.wrong {
+  border: 1px solid #c00;
+  padding: 3px;
+}
+span.tag {
+  color: dodgerblue;
+}
+.highlight {
+  background-color: #eee;
+  letter-spacing: 2px;
+  padding: 3px 5px;
+}
+li.nodeco {
+  list-style-type: none;
+}
+li.red {
+  color: red;
+}
+li.black {
+  color: black;
+}
 .Vanilla {
   color: #fc4;
 }

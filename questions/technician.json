@@ -328,7 +328,7 @@ answer: "C",
 question: "How soon after passing the examination for your first amateur radio license may you operate a transmitter on an amateur service frequency? ",
 A: "Immediately",
 B: "30 days after the test date",
-C: "As soon as your operator/station license grant appears in the FCC�s license database",
+C: "As soon as your operator/station license grant appears in the FCC's license database",
 D: "You must wait until you receive your license in the mail from the FCC"
 },
 
@@ -450,7 +450,7 @@ D: "Only when using amateur repeaters linked to the Internet"
 
 T1D10: {
 answer: "D", 
-question: "What is the meaning of the term �broadcasting� in the FCC rules for the amateur services?",
+question: "What is the meaning of the term 'broadcasting' in the FCC rules for the amateur services?",
 A: "Two-way transmissions by amateur stations",
 B: "Transmission of music",
 C: "Transmission of messages directed only to amateur operators ",
@@ -514,7 +514,7 @@ D: "The class of operator license held by the control operator"
 T1E05: {
 answer: "C", 
 question: "What is an amateur station control point?",
-A: "The location of the station�s transmitting antenna",
+A: "The location of the station's transmitting antenna",
 B: "The location of the station transmitting apparatus ",
 C: "The location at which the control operator function is performed",
 D: "The mailing address of the station licensee"
@@ -594,7 +594,7 @@ D: "Broadcast station"
 
 T1F02: {
 answer: "C", 
-question: "When using tactical identifiers such as �Race Headquarters� during a community service net operation, how often must your station transmit the station�s FCC-assigned call sign? ",
+question: "When using tactical identifiers such as 'Race Headquarters' during a community service net operation, how often must your station transmit the station's FCC-assigned call sign? ",
 A: "Never, the tactical call is sufficient",
 B: "Once during every hour",
 C: "At the end of each communication and every ten minutes during a communication",
@@ -739,9 +739,9 @@ D: "Wait for the station to call CQ then answer it"
 T2A05: {
 answer: "C",
 question: "How should you respond to a station calling CQ?",
-A: "Transmit CQ followed by the other station�s call sign",
-B: "Transmit your call sign followed by the other station�s call sign",
-C: "Transmit the other station�s call sign followed by your call sign",
+A: "Transmit CQ followed by the other station's call sign",
+B: "Transmit your call sign followed by the other station's call sign",
+C: "Transmit the other station's call sign followed by your call sign",
 D: "Transmit a signal report followed by your call sign"
 },
 
@@ -765,7 +765,7 @@ D: "Station identification is required at least every ten minutes during the tes
 
 T2A08: {
 answer: "D",
-question: "What is the meaning of the procedural signal �CQ�?",
+question: "What is the meaning of the procedural signal 'CQ'?",
 A: "Call on the quarter hour",
 B: "A new antenna is being tested (no station should answer)",
 C: "Only the called station should transmit",
@@ -774,11 +774,11 @@ D: "Calling any station"
 
 T2A09: {
 answer: "B",
-question: "What brief statement is often transmitted in place of �CQ� to indicate that you are listening on a repeater?",
-A: "The words �Hello test� followed by your call sign",
+question: "What brief statement is often transmitted in place of 'CQ' to indicate that you are listening on a repeater?",
+A: "The words 'Hello test' followed by your call sign",
 B: "Your call sign ",
 C: "The repeater call sign followed by your call sign",
-D: "The letters �QSY� followed by your call sign"
+D: "The letters 'QSY' followed by your call sign"
 },
 
 T2A10: {
@@ -939,7 +939,7 @@ answer: "C",
 question: "What is one way to recharge a 12-volt lead-acid station battery if the commercial power is out?",
 A: "Cool the battery in ice for several hours",
 B: "Add acid to the battery",
-C: "Connect the battery in parallel with a vehicle�s battery and run the engine",
+C: "Connect the battery in parallel with a vehicle's battery and run the engine",
 D: "All of these choices are correct"
 },
 
@@ -1017,7 +1017,7 @@ D: "The information needed to track the message as it passes through the amateur
 
 T2C11: {
 answer: "A",
-question: "What is meant by the term �check� in reference to a formal traffic message?",
+question: "What is meant by the term 'check' in reference to a formal traffic message?",
 A: "The check is a count of the number of words or word equivalents in the text portion of the message",
 B: "The check is the value of a money order attached to the message",
 C: "The check is a list of stations that have relayed the message",
@@ -1035,7 +1035,7 @@ D: "A training program that certifies amateur operators for membership in the Ra
 
 T3A01: {
 answer: "D",
-question: "What should you do if another operator reports that your station�s 2 meter signals were strong just a moment ago, but now they are weak or distorted?",
+question: "What should you do if another operator reports that your station's 2 meter signals were strong just a moment ago, but now they are weak or distorted?",
 A: "Change the batteries in your radio to a different type",
 B: "Turn on the CTCSS tone",
 C: "Ask the other operator to adjust his squelch control",
@@ -1395,7 +1395,7 @@ D: "Antenna"
 
 T4A07: {
 answer: "C",
-question: "How is a computer�s sound card used when conducting digital communications using a computer?",
+question: "How is a computer's sound card used when conducting digital communications using a computer?",
 A: "The sound card communicates between the computer CPU and the video display",
 B: "The sound card records the audio frequency for video display",
 C: "The sound card provides audio to the microphone input and converts received audio to digital form",
@@ -1422,7 +1422,7 @@ D: "Ferrite choke"
 
 T4A10: {
 answer: "B",
-question: "What is the source of a high-pitched whine that varies with engine speed in a mobile transceiver�s receive audio?",
+question: "What is the source of a high-pitched whine that varies with engine speed in a mobile transceiver's receive audio?",
 A: "The ignition system",
 B: "The alternator",
 C: "The electric fuel pump",
@@ -1435,7 +1435,7 @@ question: "Where should the negative return connection of a mobile transceiver's
 A: "At the battery or engine block ground strap",
 B: "At the antenna mount",
 C: "To any metal part of the vehicle",
-D: "Through the transceiver�s mounting bracket"
+D: "Through the transceiver's mounting bracket"
 },
 
 T4A12: {
@@ -1444,7 +1444,7 @@ question: "What could be happening if another operator reports a variable high-p
 A: "Your microphone is picking up noise from an open window",
 B: "You have the volume on your receiver set too high",
 C: "You need to adjust your squelch control",
-D: "Noise on the vehicle�s electrical system is being transmitted along with your speech audio"
+D: "Noise on the vehicle's electrical system is being transmitted along with your speech audio"
 },
 
 T4B01: {
@@ -1504,7 +1504,7 @@ D: "The receiver RIT or clarifier'
 
 T4B07: {
 answer: "B",
-question: "What does the term �RIT� mean?",
+question: "What does the term 'RIT' mean?",
 A: "Receiver Input Tone",
 B: "Receiver Incremental Tuning",
 C: "Rectifier Inverter Test",
@@ -1541,9 +1541,9 @@ D: "5000 Hz"
 T4B11: {
 answer: "C",
 question: "Which of the following describes the common meaning of the term "repeater offset"?",
-A: "The distance between the repeater�s transmit and receive antennas",
+A: "The distance between the repeater's transmit and receive antennas",
 B: "The time delay before the repeater timer resets",
-C: "The difference between the repeater�s transmit and receive frequencies",
+C: "The difference between the repeater's transmit and receive frequencies",
 D: "Matching the antenna impedance to the feed line impedance"
 },
 
@@ -1828,7 +1828,7 @@ D: "Tesla"
 
 T5C06: {
 answer: "A",
-question: "What does the abbreviation �RF� refer to? ",
+question: "What does the abbreviation 'RF' refer to? ",
 A: "Radio frequency signals of all types",
 B: "The resonant frequency of a tuned circuit",
 C: "The real frequency transmitted as opposed to the apparent frequency",
@@ -2494,7 +2494,7 @@ D: "Phase converter"
 
 T7A07: {
 answer: "D",
-question: "What is meant by term �PTT�?",
+question: "What is meant by term 'PTT'?",
 A: "Pre-transmission tuning to reduce transmitter harmonic emission",
 B: "Precise tone transmissions used to limit repeater access to only certain signals",
 C: "A primary transformer tuner use to match antennas",
@@ -2584,7 +2584,7 @@ D: "Switch the transmitter to a narrow-band mode"
 
 T7B06: {
 answer: "A",
-question: "Which of the following actions should you take if a neighbor tells you that your station�s transmissions are interfering with their radio or TV reception?",
+question: "Which of the following actions should you take if a neighbor tells you that your station's transmissions are interfering with their radio or TV reception?",
 A: "Make sure that your station is functioning properly and that it does not cause interference to your own radio or television when it is tuned to the same channel ",
 B: "Immediately turn off your transmitter and contact the nearest FCC office for assistance",
 C: "Tell them that your license gives you the right to transmit and nothing can be done to reduce the interference",
@@ -2602,7 +2602,7 @@ D: "All of these choices are correct"
 
 T7B08: {
 answer: "D",
-question: "What should you do if something in a neighbor�s home is causing harmful interference to your amateur station?",
+question: "What should you do if something in a neighbor's home is causing harmful interference to your amateur station?",
 A: "Work with your neighbor to identify the offending device",
 B: "Politely inform your neighbor about the rules that prohibit the use of devices which cause interference",
 C: "Check your station and make sure it meets the standards of good amateur practice",
@@ -2613,7 +2613,7 @@ T7B09: {
 answer: "A",
 question: "What is a Part 15 device?",
 A: "An unlicensed device that may emit low powered radio signals on frequencies used by a licensed service",
-B: "A type of amateur radio that can legally be used in the citizen�s band",
+B: "A type of amateur radio that can legally be used in the citizen's band",
 C: "A device for long distance communications using special codes sanctioned by the International Amateur Radio Union",
 D: "A type of test set used to determine whether a transmitter is in compliance with FCC regulation 91.15"
 },
@@ -2669,7 +2669,7 @@ question: "What, in general terms, is standing wave ratio (SWR)?",
 A: "A measure of how well a load is matched to a transmission line",
 B: "The ratio of high to low impedance in a feed line",
 C: "The transmitter efficiency ratio",
-D: "An indication of the quality of your station�s ground connection"
+D: "An indication of the quality of your station's ground connection"
 },
 
 T7C04: {
@@ -2730,7 +2730,7 @@ T7C10: {
 answer: "D",
 question: "Why should the outer jacket of coaxial cable be resistant to ultraviolet light?",
 A: "Ultraviolet resistant jackets prevent harmonic radiation",
-B: "Ultraviolet light can increase losses in the cable�s jacket",
+B: "Ultraviolet light can increase losses in the cable's jacket",
 C: "Ultraviolet and RF signals can mix together, causing interference",
 D: "Ultraviolet light can damage the jacket and allow water to enter the cable"
 },
@@ -3136,7 +3136,7 @@ answer: "C",
 question: "What is required in place of on-air station identification when sending signals to a radio control model using amateur frequencies?",
 A: "Voice identification must be transmitted every 10 minutes",
 B: "Morse code ID must be sent once per hour",
-C: "A label indicating the licensee�s name, call sign and address must be affixed to the transmitter",
+C: "A label indicating the licensee's name, call sign and address must be affixed to the transmitter",
 D: "A flag must be affixed to the transmitter antenna with the station call sign in 1 inch high letters or larger"
 },
 
@@ -3196,7 +3196,7 @@ D: "All of these choices are correct"
 
 T8D02: {
 answer: "A",
-question: "What does the term �APRS� mean?",
+question: "What does the term 'APRS' mean?",
 A: "Automatic Packet Reporting System",
 B: "Associated Public Radio Station",
 C: "Auto Planning Radio Set-up",
@@ -3313,7 +3313,7 @@ D: "A vertically polarized antenna "
 
 T9A04: {
 answer: "A",
-question: "What is a disadvantage of the �rubber duck� antenna supplied with most handheld radio transceivers?",
+question: "What is a disadvantage of the 'rubber duck' antenna supplied with most handheld radio transceivers?",
 A: "It does not transmit or receive as effectively as a full-sized antenna",
 B: "It transmits a circularly polarized signal",
 C: "If the rubber end cap is lost it will unravel very quickly",
@@ -3340,7 +3340,7 @@ D: "Isotropic antennas"
 
 T9A07: {
 answer: "A",
-question: "What is a good reason not to use a �rubber duck� antenna inside your car?",
+question: "What is a good reason not to use a 'rubber duck' antenna inside your car?",
 A: "Signals can be significantly weaker than when it is outside of the vehicle",
 B: "It might cause your radio to overheat",
 C: "The SWR might decrease, decreasing the signal strength",

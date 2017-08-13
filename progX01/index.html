@@ -15,7 +15,8 @@
         href="http://localhost:8080/static/css/examples.css" />
   </head>
   <body>
-    <div class="ui grid" id="app" style="width: 800px;border: 1px solid black;">
+    <div class="ui grid" id="app" 
+      style="width: 800px;border: 1px solid black;margin:100px 0 0 100px;">
       <div class="five wide column"></div>
       <div class="six wide column">
         <div style="width: 100%;font-weight: bold;">Practie Exam for ARRL Technician License</div>
@@ -177,6 +178,17 @@
                 aq[item] = thisq[item]
               })
               this.qlist.push(aq)
+              this.q = {
+                pos: 0,
+                tag: '',
+                choiceList: {A: false, B: false, C: false, D: false},
+                answer: "",
+                question: '',
+                A: '',
+                B: '',
+                C: '',
+                D: ''
+              }
             }
             // console.log(nameList)           
             // console.log('question list: ', this.qlist)

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2017 Jay Kelkar <jkelkar@gmail.com> -->
+  <!-- Free to use in any form -->
+  <!-- Local components -->
+  <head>
+    <meta charset="utf-8">
+    <title>custom events - 09</title>    
+    <script src="http://localhost:8080/node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" 
+        href="http://localhost:8080/static/css/examples.css" />
+  </head>
+  <body>
+
+
+
+
+    
+    <div id="app">
+      <h2>Just collects clicks</h2>
+      
+      <div style="margin-bottom: 20px; border: 1px solid #ccc;width: 400px;">
+        <span class="big"> This is shown in the top level Vue</span>
+        <div class="blue big"> Total clicks so far: {{ clicks}} </div>
+      </div>
+      
+      <clicker @clicked="handlePosClick" label="+" style="margin-right: 10px;"></clicker>
+      <clicker @clicked="handleNegClick" label="-"></clicker>
+      
+    </div>
+
+    <script>
+      // props and data attributes are reflected in 
+      Vue.component('clicker', {
+        // this component shows a  button
+        template: `<button class="fixed" @click="$emit('clicked', 1)"
+          :class="{'green': label==='+', 'red': label==='-'}">
+{{label}}</button>`,
+        props: ['label'],
+        data () {
+          return {
+          }
+        }
+      })
+
+      var app = new Vue({
+        el: '#app',
+        data: {
+          clicks: 0
+        },
+        methods: {
+          handlePosClick: function (ct) {
+            this.clicks += 1
+          },
+          handleNegClick: function (ct) {
+            if (this.clicks === 0) {
+              return
+            }
+            this.clicks -= 1
+          }
+        }
+      })
+
+    </script>
+  </body>
+</html>

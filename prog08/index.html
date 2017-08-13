@@ -5,7 +5,7 @@
   <!-- Local components -->
   <head>
     <meta charset="utf-8">
-    <title>inline component - 06</title>    
+    <title>style binding - 08</title>    
     <script src="http://localhost:8080/node_modules/vue/dist/vue.js"></script>
     <link rel="stylesheet" type="text/css" 
         href="http://localhost:8080/static/css/examples.css" />
@@ -15,23 +15,19 @@
 
 
 
+
     <div id="app">
       <h2>A Yes/No button component</h2>
       <yesnobutton></yesbutton>
     </div>
 
-
-
-
     <script>
 
       Vue.component('yesnobutton', {
         // this component shows a yes button
-
-        template: `<button class="fixed" v-on:click="state = !state">
-{{ state ? 'Yes' : 'No '}}</button>`,
-
-        data: function () {
+        template: `<button class="fixed" @click="state  = !state"
+        :class="{'yes': state, 'no': !state}">{{ state ? 'Yes' : 'No '}}</button>`,
+        data () {
           return {
             state: true
           }

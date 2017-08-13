@@ -1,5 +1,6 @@
 body {
-  padding: 20px 100px;
+  padding: 20px 50px;
+  font-family: 'helvetica neue', sans-serif;
 }
 .big {
   font-size: 24px;
@@ -66,10 +67,12 @@ li.black {
 .Strawberry {
   color: #f33;
 }
-.no {
+.no,
+button.red {
   background-color: #f88;
 }
-.yes {
+.yes,
+button.green {
   background-color: #8f8;
 }
 input {
@@ -79,4 +82,8 @@ input {
 .fixed {
   font-family: 'Andale', sans-serif;
   font-size: 24px;
+}
+button.btn {
+  padding: 5px;
+  font-size: 20px;
 }

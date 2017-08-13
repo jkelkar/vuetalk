@@ -514,8 +514,8 @@ D: "The class of operator license held by the control operator"
 T1E05: {
 answer: "C", 
 question: "What is an amateur station control point?",
-A: "The location of the station's transmitting antenna",
-B: "The location of the station transmitting apparatus ",
+A: "The location of the station''s transmitting antenna",
+B: "The location of the station transmitting apparatus",
 C: "The location at which the control operator function is performed",
 D: "The mailing address of the station licensee"
 },

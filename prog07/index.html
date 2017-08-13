@@ -5,7 +5,7 @@
   <!-- Local components -->
   <head>
     <meta charset="utf-8">
-    <title>inline component - 06</title>    
+    <title>list rendering - 07</title>    
     <script src="http://localhost:8080/node_modules/vue/dist/vue.js"></script>
     <link rel="stylesheet" type="text/css" 
         href="http://localhost:8080/static/css/examples.css" />
@@ -16,8 +16,8 @@
 
 
     <div id="app">
-      <h2>A Yes/No button component</h2>
-      <yesnobutton></yesbutton>
+      <h2>A List rendering component</h2>
+      <lister></lister>
     </div>
 
 
@@ -25,15 +25,28 @@
 
     <script>
 
-      Vue.component('yesnobutton', {
+      Vue.component('lister', {
         // this component shows a yes button
 
-        template: `<button class="fixed" v-on:click="state = !state">
-{{ state ? 'Yes' : 'No '}}</button>`,
+        template: `
+<div>
+  <ul>
+    <li class="nodeco" v-for="user in users">
+      <div style="border: 1px solid #ccc;margin-bottom: 10px;">
+        <div v-for="(value, key) in user">
+          <span class="blue">{{key}}</span>: <span>{{value}}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>`,
 
         data: function () {
           return {
-            state: true
+            users: [
+              {name: 'Jay', hobby: 'books'},
+              {name: 'Erin', hobby: 'crafting'}
+            ]
           }
         }
       })

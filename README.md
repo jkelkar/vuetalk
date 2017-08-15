@@ -10,8 +10,10 @@ listeners a choice between me talking to them with slides in an abstract
 sense or showing them how it is used. Both kinds of information are made
 available here. My hope is that you will have a pleasant journey.
 
-The first 15 or so examples are set up one to a directory labeled prog##. 
-At the same level of these directories is a file app.js, that is used to deliver all required files to the sample programs. This way, once installed you do not need 
+The first 9 or so examples are set up one to a directory labeled prog##. 
+At the same level of these directories is a file app.js, that is 
+used to deliver all required files to the sample programs. 
+This way, once installed you do not need 
 access to the internet and are not dependant on the network at all. To complete
 this freedom, you should also get a copy of the site vuejs.ord and install
 it on your machine. Now you can go to your favorite space and enjoy learning.
@@ -43,6 +45,20 @@ Enjoy.
 
 Jay Kelkar <jkelkar@gmail.com>
 
+```
 The examples:
+00: Basic HTML set up which forms the basis of the rest of the code
 01: Basic minimum Vue example - complete but trivial
-02: 
+02: v-model two way binding example
+03: v-bind and v-on one way binding replacement for above
+04: v-bind with checkboxes and radio buttons
+05: event handling, conditionals and style binding
+06: Inline components a simple example
+07: List rendering of list and object
+08: Style binding in a component
+09: Components with props and custom events
+
+ex01: Example of self paced learning - for AALR technician class exam
+
+
+```

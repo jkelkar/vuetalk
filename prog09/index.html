@@ -21,7 +21,7 @@
       
       <div style="margin-bottom: 20px; border: 1px solid #ccc;width: 400px;">
         <span class="big"> This is shown in the top level Vue</span>
-        <div class="blue big"> Total clicks so far: {{ clicks}} </div>
+        <div class="blue big"> Total clicks so far: {{ clicks }} </div>
       </div>
       
       <clicker @clicked="handlePosClick" label="+" style="margin-right: 10px;"></clicker>
@@ -35,7 +35,7 @@
         // this component shows a  button
         template: `<button class="fixed" @click="$emit('clicked', 1)"
           :class="{'green': label==='+', 'red': label==='-'}">
-{{label}}</button>`,
+{{ label }}</button>`,
         props: ['label'],
         data () {
           return {
@@ -50,13 +50,13 @@
         },
         methods: {
           handlePosClick: function (ct) {
-            this.clicks += 1
+            this.clicks += ct
           },
           handleNegClick: function (ct) {
             if (this.clicks === 0) {
               return
             }
-            this.clicks -= 1
+            this.clicks -= ct
           }
         }
       })

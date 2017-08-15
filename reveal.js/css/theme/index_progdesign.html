@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Intro To VueJS</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      body {font-size: 32px;}
+      .slides {margin: 40px 70px;}
+      section {background-color: #d4f6fe;}
+      .reveal ul {list-style-type: none; display: block;}
+      .reveal ul li {list-style: none; font-size: 32px !important;}
+      .reveal {background-color: #d4f6fe;}
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body >
+  <div class="reveal">
+    <div class="slides">
+        <section style="display: block;" class="past">
+          <h1>Design for Programmers</h1>
+          <h3>A beginner's guide to hacking web design</h3>
+          <img src="design/img/logo.png">
+          <footer>
+            <a href="http://www.twitter.com/adi_dahiya" class="roll"><span data-title="@adi_dahiya">@adi_dahiya</span></a>⋅<a href="http://www.github.com/adidahiya" class="roll"><span data-title="github/adidahiya">github/adidahiya</span></a>
+          </footer>
+        </section>
+        <section style="display: block;" class="present">
+          <h2>Design is important</h2>
+          <ul>
+            <li class="fragment visible">It makes your hack stand out from the rest</li>
+            <li class="fragment visible">Your audience will take you more seriously<small>(Especially if you want to get publicity / press)</small>
+            </li>
+            <li class="fragment visible">Better usability<small>The average person doesn't care whether you use Rails or
+                Django or Node.js or whatever. What matters is the user
+                experience and how they interact with the application.</small>
+            </li>
+            <li class="fragment visible">Consistency across browsers<small>Wouldn't it be awesome if you could pull up your site in
+                mobile Safari right now and have it <em>just work</em>?</small>
+            </li>
+          </ul>
+        </section>
+        <section style="display: block;" class="future">
+          <h2>What this talk covers</h2>
+          <ol>
+            <li>The design process</li>
+            <li>Visual design fundamentals</li>
+            <li>Getting started with CSS</li>
+            <li>Clean, semantic HTML</li>
+            <li>Advanced CSS techniques</li>
+            <li>Demo</li>
+            <li>Front end tools &amp; cross-browser support</li>
+          </ol>
+        </section>
+        <section style="display: block;" class="future">
+          <h2>The design process</h2>
+          <blockquote>Design for the experience first.</blockquote>
+          <ul>
+            <li>Think about flows, scenarios, and activities<br><small>Structure and navigation will emerge from connecting these parts</small>
+            </li>
+            <li>Design for the existing ecosystem<br><small>Understand that people already have web apps they know and use</small>
+            </li>
+            <li>Good design often comes from adapting what others make<br><small>Make it a point to explore how others have solved the design problems you are working on</small>
+            </li>
+          </ul>
+        </section>
+        <section style="display: block;" class="stack future">
+          <section>
+            <h1>Visual design fundamentals</h1>
+            <img src="design/img/design101.png">
+          </section>
+          <section>
+            <h2>Utilizing color</h2>
+            <ul>
+              <li>HSL Model</li>
+              <li>Be sensible, use a limited color pallette<small>However, not limited to Photoshop "web-only" colors</small>
+              </li>
+              <li>Combining colors<br><small>Don't use colors of the same value</small><br><img src="design/img/ex1.jpg" style="margin-right: 30px" width="380"><img src="design/img/ex2.jpg" width="380">
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Contrast in Design</h2>
+            <ul>
+              <li>General rule: go big or go home</li>
+              <li>With color<br><small>Use strong contrast between foreground (text) and background color</small><small>If in doubt, see what your design looks like in grayscale</small>
+              </li>
+              <li>With typography<br><small>When combining fonts, change up the font style + weight</small><br><img src="design/img/contrast.png">
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section style="display: none;" class="stack future">
+          <section>
+            <h2>A Primer on Typography</h2>
+            <blockquote cite="http://informationarchitects.net/blog/the-web-is-all-about-typography-period/">Web Design is 95% typography</blockquote>
+            <ul>
+              <li>Typeface<br><small>Basic terminology:</small><br><img src="design/img/type3.png"><br><small>Kerning, letter spacing, word spacing</small><br><small>Leading, line height</small>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>A Primer on Typography (continued)</h2>
+            <img src="design/img/type1.png" width="600"><img src="design/img/type2.png" width="600"><br>
+            <ul class="small">
+              <li>Serif fonts are easier to read</li>
+              <li>Utilize white space</li>
+              <li>Avoid distracting backgrounds</li>
+              <li>Only put emphasis (bold, italic, color) on elements that need it most</li>
+            </ul>
+          </section>
+          <section>
+            <h2>A Primer on Typography (continued)</h2>
+            <ul>
+              <li>Type layout<br><small>Treat bodies of text as a user interface</small><br><small>Keep justification and indentation in mind</small>
+              </li>
+              <li>Establish a consistent type hierarchy<br><small>Headings, subheadings, body text, captions, footnotes</small>
+              </li>
+            </ul>
+            <img src="design/img/typography.png" width="800">
+          </section>
+        </section>
+        <section style="display: none;" class="future">
+          <h2>Getting Started with CSS</h2>
+          <h4>The box model</h4>
+          <img src="design/img/box.gif"><br><br><small><strong>Protip</strong>: use <code>* { box-sizing: border-box; }</code></small>
+        </section>
+        <section style="display: none;" class="future">
+          <h2>Page layouts</h2>
+          <br>
+          <h4>Generally, two ways to position elements:</h4>
+          <ol style="margin-bottom: 40px">
+            <li>Absolute positioning<br><small>Not recommended, but necessary for some situations</small>
+            </li>
+            <li>Relative positioning<br><small>Allows you to float elements and use z-index</small>
+            </li>
+          </ol>
+          <br>
+          <h4>The "display" property</h4>
+          <pre><code class="css"><span class="tag">display</span>: <span class="tag">none</span>;          <span class="comment">/* hide elements (zero width &amp; height) */</span>
+<span class="tag">display</span>: <span class="tag">block</span>;         <span class="comment">/* element takes up whole container width */</span>
+<span class="tag">display</span>: <span class="tag">inline</span>;        <span class="comment">/* element only spans its contents */</span>
+<span class="tag">display</span>: <span class="tag">inline</span>-<span class="tag">block</span>;  <span class="comment">/* shares behavior of inline &amp; block */</span></code></pre>
+        </section>
+        <section style="display: none;" class="future">
+          <h2>Grid systems</h2>
+          <p>Provide a structure to flow all elements on a page</p>
+          <small>Most common:<a href="http://960.gs/" class="roll"><span data-title="960px grid system">960px grid system</span></a></small><img src="design/img/960.png" width="800">
+        </section>
+        <section style="display: none;" class="stack future">
+          <section>
+            <h2>Clean, Semantic HTML</h2>
+            <p>HTML is the language of "sandwiching content between identifying tags"</p>
+            <pre><xmp class="code"><html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet">
+    <script type="text/javascript">
+  </head>
+
+  <body>
+    <div> Stuff </div>
+  </body>
+</html></xmp></pre>
+          </section>
+          <section>
+            <h2>Some HTML tips</h2>
+            <ul>
+              <li>HTML5 introduces new tags that help to better identify content:
+                <em>header, nav, section, article, aside, footer, hgroup</em></li>
+              <li>use <code>[strong]</code> and <code>[em]</code> instead of
+<code>[b]</code> and <code>[i]</code> tags</li>
+              <li>Avoid table layouts</li>
+              <li>Try to use as little markup as possible</li>
+            </ul>
+          </section>
+        </section>
+        <section style="display: none;" class="stack future">
+          <section>
+            <h2>Advanced CSS techniques</h2>
+            <br>
+            <h4>Let's start with sprites</h4>
+            <ul>
+              <li>The problem:<br><small>Using a lot of images results in too many web requests</small>
+              </li>
+              <li class="fragment">The solution:<br><small>Put them all in one image file and use CSS to slice relevant parts</small>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Sprites example</h2>
+            <pre><xmp class="html"><div class="ui" id="up"></div>
+
+<div class="ui" id="down"></div>
+
+<div class="ui" id="left"></div>
+
+<div class="ui" id="right"></div></xmp></pre><pre><code class="css"><span class="class">.ui</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>px</span>;</span>
+  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">40</span>px</span>;</span>
+  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span>;</span>
+  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">5</span>px</span>;</span>
+  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url(<span class="string">'img/my_sprite.png'</span>)</span></span>;</span> <span class="comment">/* 40 x 160 px image */</span>
+<span class="rule">}</span></span>
+
+<span class="id">#up</span> <span class="rules">{ <span class="rule"><span class="attribute">background-position</span>:<span class="value"> <span class="number">0</span>px <span class="number">0</span>px</span>;</span> <span class="rule">}</span></span>
+
+<span class="id">#down</span> <span class="rules">{ <span class="rule"><span class="attribute">background-position</span>:<span class="value"> <span class="number">0</span>px -<span class="number">40</span>px</span>;</span> <span class="rule">}</span></span>
+
+<span class="id">#left</span> <span class="rules">{ <span class="rule"><span class="attribute">background-position</span>:<span class="value"> <span class="number">0</span>px -<span class="number">80</span>px</span>;</span> <span class="rule">}</span></span>
+
+<span class="id">#right</span> <span class="rules">{ <span class="rule"><span class="attribute">background-position</span>:<span class="value"> <span class="number">0</span>px -<span class="number">120</span>px</span>;</span> <span class="rule">}</span></span></code></pre>
+          </section>
+        </section>
+        <section class="align-left future" style="display: none;">
+          <h2>Pseudo selectors &amp; elements</h2>
+          <p>Hover / focus effects</p><pre><code class="css">.button:hover, .field:focus { ... }</code></pre>
+          <p></p>
+          <p>Links</p><pre><code class="css">a:link, a:visited, a:active, a:hover { ... }</code></pre>
+          <p></p>
+          <p>Content before &amp; after</p><pre><code class="css">p.item:before, p.item:after { ... }</code></pre>
+          <p></p>
+          <p>And more...</p><pre><code class="css">ul li:first-child { ... }</code></pre>
+          <p></p>
+        </section>
+        <section style="display: none;" class="future">
+          <h2>Effects &amp; layer styles</h2>
+          <pre><code class="css" style="border-radius: 10px;"><span class="tag">border</span>-<span class="tag">radius</span>: 10<span class="tag">px</span>;</code></pre><br><pre><code class="css" style="box-shadow: 0px 2px 8px #333;"><span class="tag">box</span>-<span class="tag">shadow</span>: 0<span class="tag">px</span> 2<span class="tag">px</span> 8<span class="tag">px</span> <span class="id">#333</span>;</code></pre><br><pre><code class="css" style="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1E5799), color-stop(100%,#7DB9E8))"><span class="tag">background</span>: <span class="tag">linear</span>-<span class="tag">gradient</span>(<span class="tag">top</span>, <span class="id">#1e5799</span> 0%, <span class="id">#7db9e8</span> 100%);</code></pre><br><pre><code class="css" style="text-shadow: 0px 0px 3px #FFF;"><span class="tag">text</span>-<span class="tag">shadow</span>: 0<span class="tag">px</span> 0<span class="tag">px</span> 3<span class="tag">px</span> <span class="id">#FFF</span>;</code></pre>
+        </section>
+        <section style="display: none;" class="future">
+          <h2>Apply typography concepts</h2>
+          <ul>
+            <li>Leading = <code>line-height</code></li>
+            <li>Kerning = <code>letter-spacing</code></li>
+            <li>Word spacing = <code>word-spacing</code></li>
+            <li>Typeface = <code>font-family</code></li>
+            <li>Font weight = <code>font-weight</code></li>
+          </ul>
+        </section>
+        <section style="display: none;" class="future">
+          <h2>Cross-Browser support</h2>
+          <ul>
+            <li>
+              <a href="http://www.scribd.com/doc/59761827/Untitled?secret_password=2a4584tcot2boeqxeq2n#full" class="roll"><span data-title="Why you should stop designing for IE">Why you should stop designing for IE</span></a>
+            </li>
+            <li>You will often need vendor prefixes to support the major
+              browsers (mixins help a lot here)</li>
+          </ul>
+          <pre><code class="css"><span class="class">.button</span> <span class="rules">{
+  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> <span class="number">0</span>px <span class="number">1</span>px <span class="number">8</span>px <span class="number">#999</span></span>;</span>
+  <span class="rule"><span class="attribute">-moz-box-shadow</span>:<span class="value"> <span class="number">0</span>px <span class="number">1</span>px <span class="number">8</span>px <span class="number">#999</span></span>;</span>
+  <span class="rule"><span class="attribute">-webkit-box-shadow</span>:<span class="value"> <span class="number">0</span>px <span class="number">1</span>px <span class="number">8</span>px <span class="number">#999</span></span>;</span>
+  <span class="rule"><span class="attribute">-khtml-box-shadow</span>:<span class="value"> <span class="number">0</span>px <span class="number">1</span>px <span class="number">8</span>px <span class="number">#999</span></span>;</span>
+
+  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5</span>px</span>;</span>
+  <span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"> <span class="number">5</span>px</span>;</span>
+  <span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"> <span class="number">5</span>px</span>;</span>
+  <span class="rule"><span class="attribute">-khtml-border-radius</span>:<span class="value"> <span class="number">5</span>px</span>;</span>
+<span class="rule">}</span></span></code></pre>
+        </section>
+        <section style="display: none;" class="future">
+          <h2>Let's design something</h2>
+          <a href="http://git.to/designdemo" class="roll"><span data-title="git.to/designdemo">git.to/designdemo</span></a>
+        </section>
+        <section style="display: block;" class="stack future">
+          <section>
+            <h2>Awesome front end tools</h2>
+            <ul>
+              <li>The <a href="http://jtaby.com/2012/04/23/modern-web-development-part-1.html" class="roll"><span data-title="webkit inspector">webkit inspector</span></a> is your friend</li>
+              <li>See front end code changes show up live:<br><a href="http://livereload.com/" class="roll"><span data-title="LiveReload,">LiveReload,</span></a><a href="https://github.com/guard/guard" class="roll"><span data-title="guard,">guard,</span></a><a href="http://incident57.com/codekit/" class="roll"><span data-title="CodeKit">CodeKit</span></a>
+              </li>
+              <li>Sandbox / experiment:<br><a href="http://jsfiddle.net/" class="roll"><span data-title="jsFiddle,">jsFiddle,</span></a><a href="http://cssdeck.com" class="roll"><span data-title="CSSDeck">CSSDeck</span></a>
+              </li>
+              <li>Bootstrap your front end design:<br><a href="http://twitter.github.com/bootstrap" class="roll"><span data-title="Twitter Bootstrap,">Twitter Bootstrap,</span></a><a href="http://foundation.zurb.com/" class="roll"><span data-title="Foundation,">Foundation,</span></a><a href="http://html5boilerplate.com/" class="roll"><span data-title="HTML5 Boilerplate,">HTML5 Boilerplate,</span></a><a href="http://jqueryui.com/" class="roll"><span data-title="jQuery UI">jQuery UI</span></a>
+              </li>
+              <li>Write HTML and CSS more efficiently:<br><a href="http://lesscss.org/" class="roll"><span data-title="LESS,">LESS,</span></a><a href="http://sass-lang.com/" class="roll"><span data-title="SASS,">SASS,</span></a><a href="http://compass-style.org/" class="roll"><span data-title="Compass,">Compass,</span></a><a href="http://haml.info/" class="roll"><span data-title="HAML,">HAML,</span></a><a href="http://slim-lang.com" class="roll"><span data-title="Slim">Slim</span></a>
+              </li>
+            </ul>
+          </section>
+          <section class="align-left">
+            <h2>Use better fonts</h2>
+            <p>You're not limited to browser defaults and the likes of
+              Helvetica, Times New Roman, and Lucida Grande.</p>
+            <p>Learn <a href="http://nicewebtype.com/notes/2009/10/30/how-to-use-css-font-face/" class="roll"><span data-title="
+how to embed your own fonts">
+how to embed your own fonts</span></a> with <code>@font-face</code></p>
+            <p>Get better fonts:</p>
+            <ul>
+              <li>
+                <a href="http://www.google.com/webfonts" class="roll"><span data-title="Google Web Fonts">Google Web Fonts</span></a>
+              </li>
+              <li>
+                <a href="http://www.fontsquirrel.com/fontface" class="roll"><span data-title="Font Squirrel">Font Squirrel</span></a>
+              </li>
+              <li>
+                <a href="https://typekit.com/" class="roll"><span data-title="Typekit">Typekit</span></a>
+              </li>
+              <li>
+                <a href="http://www.theleagueofmoveabletype.com/" class="roll"><span data-title="The League of Moveable Type">The League of Moveable Type</span></a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Get inspired</h2>
+            <ul>
+              <li>Explore <a href="http://dribbble.com" class="roll"><span data-title="Dribbble">Dribbble</span></a></li>
+              <li>Find &amp; copy web designs that you like<br><small>Use 'view source' and the inspector to check your solution</small>
+              </li>
+              <li>Study design patterns used in frameworks like Bootstrap</li>
+              <li>Just build / hack / do it.</li>
+            </ul>
+          </section>
+        </section>
+        <section style="display: block;" class="future">
+          <h2>Go hack something awesome</h2>
+          <br>
+          <h4>Questions or comments?</h4>
+          <a href="http://twitter.com/adi_dahiya" class="roll"><span data-title="@adi_dahiya">@adi_dahiya</span></a><br><a href="mailto:adi.dahiya14@gmail.com" class="roll"><span data-title="adi.dahiya14@gmail.com">adi.dahiya14@gmail.com</span></a>
+        </section>
+      </div>
+    </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      width: 960,
+      height: 700,
+      margin: 0.1,
+      minScale: 1,
+      maxScale: 1,
+      keyboard: {
+          13: 'next', // go to the next slide when the ENTER key is pressed 
+          27: 'left', //function() {}, // do something custom when ESC is pressed 
+          32: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding) 
+      },
+      dependencies: [
+        {
+          src: 'plugin/markdown/marked.js'
+        }, {
+          src: 'plugin/markdown/markdown.js'
+        }, {
+          src: 'plugin/notes/notes.js',
+          async: true
+        }, {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function() {
+              hljs.initHighlightingOnLoad();
+        }
+      }]
+    })
+  </script>
+</body>
+
+</html>

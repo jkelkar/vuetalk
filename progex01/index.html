@@ -144,13 +144,13 @@
             let i = 0
             while (this.qlist.length < selCount) {
               var itempos = this.getRandomInt(0, namesLength)
-              console.log('a', itempos)
+              // console.log('a', itempos)
               while (this.qlist.indexOf(itempos) !== -1) {
                 itempos = this.getRandomInt(0, namesLength)
                 // console.log('b', itempos)
               }
               let thisq = this.questions[nameList[itempos]]
-              console.log(thisq)
+              // console.log(thisq)
               // set up the selected questions of the interface
               let aq = {
                 tag: nameList[itempos],

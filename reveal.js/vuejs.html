@@ -1,0 +1,280 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/reveal_jk.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <section data-markdown class="blue">
+          <script type="text/template">
+            # Vue
+            ## A _Practical_ Approach
+
+            ### VueJS is a frontend framework
+           
+					</script>
+        </section>
+
+        <section data-markdown class="grey">
+          <script type="text/template">
+## You only need experience with 
+
+#### _HTML_,  _CSS_ & _JS_
+(Otherwise ...)
+					</script>
+        </section>
+
+        <section data-markdown class="grey">
+          <textarea data-template>
+### And some idea of how your interface 
+          
+# behaves
+<p class=smaller>Sometimes called _imagination_</p>
+					</textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+### Vue is a _progressive_ Framework
+
+<p class="smaller">Can add capability over time</p>
+
+### Vue adds _reactivity_ to the Page
+
+<p class="smaller">With Vue, the page _talks back_</p>
+          </textarea>
+        </section>
+         <section data-markdown class="blue">
+          <script type="text/template">
+            ## Show it to me
+            <p>Or is this just a _talk_?</p>
+
+          </script>
+        </section>
+
+        <section data-markdown class="blue">
+          <script type="text/template">
+            ## Simplest Vue Page
+
+
+```
+prog01/index.html  -  your very basic but working Vue page
+```
+          </script>
+        </section>
+        <section data-markdown class="grey">
+          <script type="text/template">
+            ## With Some Directives
+
+            #### _v-model_ 
+
+            ### One Way Data Flow
+            #### _v-bind_
+
+            ##### mapping Vue attributes to input field
+
+```
+prog02/index.html
+prog03/index.html
+```
+          </script>
+        </section>  
+        <section data-markdown class="grey">
+          <script type="text/template">
+            ## With other Input Elements
+
+            #### _checkbox_ and _radio button_          
+
+```
+prog04/index.html
+```
+          </script>
+        </section>
+
+        <section data-markdown class="grey">
+          <textarea data-template>
+## Event Handling & Conditionals
+## Style Binding
+#### _v-on_
+#### _v-if_
+#### _v-show_
+
+```
+prog05/index.html
+```
+          </textarea>
+        </section>
+
+        <section data-markdown class="grey">
+          <textarea data-template>
+##  Inline Components
+
+#### *template*
+#### *data* - must return an object
+#### _$parent_ and _$children_
+
+
+```
+prog06/index.html
+```
+          </textarea>
+        </section>
+        
+        <section data-markdown class="grey">
+          <textarea data-template>
+##  Style Binding 
+
+ For the same yesno component we saw earlier
+
+```
+prog08/index.html
+```
+
+          </textarea>
+        </section>
+        <section data-markdown class="blue">
+          <textarea data-template>
+##  shortcuts
+
+<p>v-bind:field="age" _becomes_ :field="age"</p> 
+<p>v-on:click="validate" _becomes_ @click="validate"</p>  
+
+          </textarea>
+        </section>
+
+        <section data-markdown class="grey">
+          <textarea data-template>
+##  Event Modifiers
+
+<p>_.stop_ - stop event propagation</p>
+<p>_.prevent_ - prevent default action</p>
+<p>_.capture_ - add event listener - for inner elem.</p>
+<p>_.self_ - trigger only if on this element</p>
+<p>_.once_</p>
+
+<p>Chainable</p>
+```
+@click.stop.prevent="doIt"
+```
+
+          </textarea>
+        </section>
+
+        <section data-markdown class="grey">
+          <textarea data-template>
+##  Key Modifiers
+
+Handles common keys and key combinations
+
+_.enter_, _.tab_, _.esc_ ...
+
+Also _.ctrl_, _.shift_ ... many more
+
+```
+@ctrl.enter="doSomething"
+```
+
+          </textarea>
+        </section>
+
+        <section data-markdown class="grey">
+          <textarea data-template>
+##  List Rendering
+
+#### _v-for_
+#### Works for _lists_ and _objects_
+
+```
+prog07/index.html
+```
+
+          </textarea>
+        </section>
+
+        <section data-markdown class="grey">
+          <textarea data-template>
+##  Props and Custom Events
+
+#### _props_ are passed in with _v-bind_ or _:_
+#### _$emit_
+#### _$on_ or _@&lt;custom event&gt;=""_
+
+```
+prog09/index.html
+```
+
+          </textarea>
+        </section>
+
+        <section data-markdown class="grey">
+          <textarea data-template>
+##  Conclusion
+
+#### Vue is _powerful_ but _easy to learn_
+#### Only limited by your imagination
+
+#### More at http://vuejs.org
+
+<p>An example learning tool</p>
+
+```
+progex01/index.html
+```
+
+<p class=smaller>I would love to hear about your experience with Vue.</p>
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+#  Thanks
+
+#### @jkelkar (github, linkedin)
+#### Jay Kelkar <jkelkar@gmail.com>
+
+<p class=smaller> Another more complex example 
+  implementaion is at</p> https://github.com/jkelkar/vuemaster
+
+<p class=smaller>This is the game "Master Mind" in VueJS.
+</p>
+          </textarea>
+        </section>
+			</div>
+		</div>
+		 <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+      // Display the page number of the current slide
+      slideNumber: true,
+      // center: false,
+      // Transition style
+	    transition: 'slide', // none/fade/slide/convex/concave/zoom
+      keyboard: {
+          13: 'next', // go to the next slide when the ENTER key is pressed 
+          27: 'left', //function() {}, // do something custom when ESC is pressed 
+          32: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding) 
+      },
+      dependencies: [
+        {
+          src: 'plugin/markdown/marked.js'
+        }, {
+          src: 'plugin/markdown/markdown.js'
+        }, {
+          src: 'plugin/notes/notes.js',
+          async: true
+        }, {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function() {
+              hljs.initHighlightingOnLoad();
+        }
+      }]
+    })
+  </script>
+	</body>
+</html>

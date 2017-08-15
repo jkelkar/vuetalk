@@ -1,0 +1,571 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Intro To VueJS</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      body {font-size: 32px;}
+      .slides {margin: 40px 70px;}
+      section {background-color: #d4f6fe;height: 550px;}
+      .reveal ul {list-style-type: none; display: block;}
+      .reveal ul li {list-style: none; font-size: 32px !important;}
+      .reveal {background-color: #d4f6fe;}
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body >
+  <div class="reveal">
+<div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.892286);">
+					<section style="top: 59.5px; display: none;" class="past" aria-hidden="true" hidden=""><h1 style="text-align: right;">
+    <b>Functional</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>Programming</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>in</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>
+<font color="#f08">5</font> Minutes</b>
+</h1></section><section style="top: 287.5px; display: none;" class="past" aria-hidden="true" hidden=""><h2><b>Which is impossible</b></h2></section><section style="top: 287.5px; display: none;" class="past" aria-hidden="true" hidden=""><h2><b>So let's rather try...</b></h2></section><section data-background-color="rgba( 22, 152, 213, 0.6 )" style="top: 41.5px; display: none;" class="has-dark-background past" aria-hidden="true" hidden=""><h1 style="text-align: right;">
+    <b>Learn to Curry</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>in</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>
+<font color="#f08">5</font> Minutes</b>
+</h1>
+<div style="text-align: right; margin-top: 4em;">
+    <b>
+<a href="http://jsdc.tw/" target="_blank" class="roll"><span data-title="JSDC.tw">JSDC.tw</span></a> 2013 Lightning Talk</b>
+</div></section><section style="top: 0px; display: none;" class="past" aria-hidden="true" hidden=""><img src="http://i.imgur.com/s4lT1NL.jpg" style="position: absolute; top: -250px; left: -310px; max-width: none; max-height: none; margin: 0px; border: none;"><h2 style="font-weight: bold; position: absolute; top: 1000%; color: rgb(0, 0, 0);">Gias Kay Lee</h2>
+<div style="font-weight: bold; position: absolute; top: 1200%; left: 0.5%;">
+<a href="http://gsklee.im/" target="_blank" style="height: 50px;" class="roll"><span data-title="gsklee.im">gsklee.im</span></a>
+</div></section><section style="top: 0px; display: none;" class="past" aria-hidden="true" hidden=""><h2 style="font-weight: bold; position: absolute; z-index: 1; top: 225%;">Currying.</h2>
+<div class="fragment visible" data-fragment-index="0">
+<img src="http://i.imgur.com/gLVZSH1.jpg" style="position: absolute; top: -360px; left: -310px; max-width: none; max-height: none; margin: 0px; border: none;"><p style="font-weight: bold; position: absolute; text-align: left; top: 500%;">Perhaps you've been told by someone before that this is one of those "advanced JavaScript techniques" you'll need to learn to become a true JavaScript ninja.</p>
+</div>
+<div class="fragment visible" data-fragment-index="1">
+<p style="font-weight: bold; position: absolute; top: 1000%; color: rgb(0, 0, 0);">But the truth is...</p>
+</div>
+<p style="color:#000;font-size:9px;position:absolute;right:0;top:1700%">http://commons.wikimedia.org/wiki/File:Phanaeng_kai.jpg</p></section><section style="top: 95px; display: none;" class="past" aria-hidden="true" hidden=""><h2 style="text-align: left;">
+    <b>Currying,</b>
+</h2>
+<p>
+<br></p>
+<div style="text-align: left;">
+<b>is a basic functional programming technique.</b>
+</div>
+<div style="text-align: left;">
+    <b>
+<br></b>
+</div>
+<div class="fragment visible" data-fragment-index="0">
+<div style="text-align: left;">
+<b>And in order to become a true JavaScript ninja,</b>
+</div>
+<div style="text-align: left;">
+<b>what you really need to master is the art of</b>
+</div>
+<p>
+<br></p>
+<h2 style="text-align: left;">
+<b>
+<font color="#0af">Functional Programming.</font>
+</b>
+</h2>
+</div></section><section style="top: 57.5px; display: none;" class="past" aria-hidden="true" hidden=""><div class="fragment visible" data-fragment-index="0">
+    <div style="display: inline-block; margin-right: 50px;">
+        <h2 style="color: rgb(0, 170, 255);">Lisp</h2>
+        <img src="http://i.imgur.com/BmbbzQT.png" style=""><h2 style="margin: 10px 0px; color: rgb(0, 170, 255);">Scheme</h2>
+        <img src="http://i.imgur.com/BmbbzQT.png" style="-webkit-transform: skewX(30deg) translateX(25px);"><p style="position: absolute; top: 25%; left: 10%;">Functional</p>
+    </div>
+    <div style="display: inline-block;">
+        <h2 style="color: rgb(255, 0, 136);">Smalltalk</h2>
+        <img src="http://i.imgur.com/BmbbzQT.png" style=""><h2 style="margin: 10px 0px; color: rgb(255, 0, 136);">Self</h2>
+        <img src="http://i.imgur.com/BmbbzQT.png" style="-webkit-transform: skewX(-30deg) translateX(-25px);"><p style="position: absolute; top: 25%; left: 70%;">Object-oriented</p>
+    </div>
+    <p style="position: absolute; top: 95%; left: 4.5%;">
+        <b>has half of its root in it.</b>
+    </p>
+</div>
+<h2 style="text-align: left; position: relative; left: 40px;">
+<b>Because <span style="color: rgb(128, 85, 196);">JavaScript</span>
+</b>
+</h2></section><section style="top: 245.5px; display: none;" class="past" aria-hidden="true" hidden=""><h2>
+    <b>Let's start with something</b>
+</h2>
+<h2>
+<b>familiar</b>
+</h2></section><section style="top: 259.5px; display: none;" class="past" aria-hidden="true" hidden=""><h2 style="text-align: left;">
+    <b>λ Function </b>
+</h2>
+<p class="fragment visible" style="text-align: left;" data-fragment-index="0">
+<b>AKA Anonymous Function</b>
+</p>
+<div class="fragment visible" style="text-align: right; position: absolute; top: -10%; left: 40%; width: 60%;" data-fragment-index="1">
+<p style="margin-bottom: 20px;">
+<b>originated from a mathematical system called</b>
+</p>
+<h2>
+<b>λ Calculus</b>
+</h2>
+</div></section><section style="top: 160px; display: none;" class="past" aria-hidden="true" hidden=""><h2 style="text-align: left;">
+    <b>λ Calculus</b>
+</h2>
+<div class="fragment visible" data-fragment-index="0">
+<p style="text-align: left;">
+<b>is about <font color="#fa0">simplifying</font> mathematical expressions into
+</b>
+</p>
+<p>
+<br></p>
+<h2 style="text-align: right;">
+    <b>λ Expressions</b>
+</h2>
+</div>
+<p class="fragment visible" style="text-align: right;" data-fragment-index="1">
+<b>to unveil the true nature of underlying computations</b>
+</p></section><section style="top: 287.5px; display: none;" class="past" aria-hidden="true" hidden=""><h2>
+    <b>To achieve this <font color="#fa0">simplification</font></b>
+</h2></section><section style="top: 0px; display: block;" class="past" aria-hidden="true" hidden=""><p style="position: absolute; top: 0%; width: 100%; z-index: 1;">
+<b>Functions</b>
+</p>
+<p>
+<br></p>
+<h2>
+<b>cube(x) = x * x * x</b>
+</h2>
+<p>
+<br></p>
+<div class="fragment visible" data-fragment-index="0">
+<div style="background-color: rgb(160, 80, 7); width: 400%; height: 400%; position: absolute; top: -150%; left: -150%;">
+</div>
+<h2 style="position: absolute; top: 25%; width: 100%;">
+<b>are expressed without names
+</b>
+</h2>
+<p>
+<br></p>
+<h2 style="position: absolute; top: 80%; width: 100%;">
+<b>(x) → x * x * x
+</b>
+</h2>
+</div></section><section style="top: 231px; display: block;" class="past" aria-hidden="true" hidden=""><p>
+<b>...and can only have</b>
+</p>
+<p>
+<br></p>
+<h2>
+<b>
+<span style="color: rgb(255, 0, 136);">1</span> argument
+</b>
+</h2></section><section style="top: 117.5px; display: block;" class="present"><p>
+<b>To handle a</b>
+</p>
+<p>
+<br></p>
+<h2>
+<b>
+<span style="color: rgb(255, 0, 136);">multi</span>-argument function
+</b>
+</h2>
+<p>
+<br></p>
+<p>
+<br></p>
+<p>
+<br></p>
+<p class="fragment visible" data-fragment-index="0">
+<b>it needs to first go through the process of...</b>
+</p></section><section data-background-color="rgba( 200, 50, 30, 0.6 )" style="top: 189px; display: block;" class="has-dark-background future" aria-hidden="true" hidden=""><h2 style="text-align: left;">
+    <b>Currying (n.)</b>
+</h2>
+<p>
+<br></p>
+<div style="text-align: left;">
+<b>A technique of transforming a multi-argument function in such a way that it can be called as a chain of functions, each with a single argument.</b>
+</div></section><section style="top: 0px; display: block;" class="future" aria-hidden="true" hidden=""><h2 style="position: absolute; z-index: 1; font-weight: bold; top: 1200%;">And the name comes from...</h2>
+<img src="http://i.imgur.com/ph4SPUL.jpg" style="position: absolute; top: -1000%; left: -100%; max-width: none; max-height: none; margin: 0px; border: none;"><p style="color:#000;font-size:9px;position:absolute;right:0;top:1700%">http://commons.wikimedia.org/wiki/File:Curry_Ist.jpg</p></section><section style="top: 0px; display: none;" aria-hidden="true" class="future" hidden=""><img src="http://i.imgur.com/N0uy3hr.png" style="opacity: 0.25; position: absolute; top: -1000%; left: -50%; max-width: none; max-height: none; margin: 0px; border: none;"><h2 style="position: absolute; z-index: 1; font-weight: bold; top: 400%;">Haskell Curry</h2>
+<p style="position: absolute; z-index: 1; font-weight: bold; top: 600%;">(1900 – 1982)</p>
+<div class="fragment" data-fragment-index="0">
+<p style="position: absolute; z-index: 1; font-weight: bold; top: 900%; text-align: right; width: 100%;">also immortalized as the name of</p>
+<p style="position: absolute; z-index: 1; font-weight: bold; top: 1000%; right: 25%; text-align: right; width: 100%;">the popular <span style="color: rgb(0, 170, 255);">pure functional</span> language</p>
+<h2 style="position: absolute; z-index: 1; font-weight: bold; top: 1000%; text-align: right; width: 100%;">Haskell</h2>
+</div>
+<p style="color:#000;font-size:9px;position:absolute;right:0;top:1700%">http://en.wikipedia.org/wiki/File:Haskell-Logo.svg</p></section><section data-background-color="rgba( 255, 255, 255, 0.6 )" style="top: 122px; display: none;" class="has-light-background future" aria-hidden="true" hidden=""><p style="text-align: left; font-weight: bold; margin: 0px 100px 20px; color: rgb(17, 17, 17);">So</p>
+<h2 style="font-weight: bold; color: rgb(17, 17, 17);">(x, y) → x + y</h2>
+<p>
+<br></p>
+<p>
+<br></p>
+<div class="fragment" data-fragment-index="0">
+<p style="text-align: left; font-weight: bold; margin: 0px 100px 20px; color: rgb(17, 17, 17);">can be curried into</p>
+<h2 style="font-weight: bold; color: rgb(17, 17, 17);">x → (y → x + y)</h2>
+</div></section><section data-background-color="rgba( 255, 255, 255, 0.6 )" style="top: 350px; display: none;" class="has-light-background future" aria-hidden="true" hidden=""><p style="text-align: left; font-weight: bold; margin: 0px 100px 20px; color: rgb(17, 17, 17);">Or, in classical notation</p>
+<h2 style="font-weight: bold; color: rgb(17, 17, 17);">f(x, y) = x + y</h2>
+<p>
+<br></p>
+<p>
+<br></p>
+<div class="fragment" data-fragment-index="0">
+<p style="text-align: left; font-weight: bold; margin: 0px 100px 20px; color: rgb(17, 17, 17);">can be curried into</p>
+<h2 style="font-weight: bold; color: rgb(17, 17, 17);">g(x) = y → f(x, y)</h2>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><h2>
+    <b>Still very confusing?</b>
+</h2>
+<p>
+<br></p>
+<p>
+<br></p>
+<p>
+<br></p>
+<h2 class="fragment" data-fragment-index="0">
+<b>Let's speak <span style="color: rgb(128, 85, 196);">JavaScript!</span>
+</b>
+</h2></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(20, 98, 135); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>a multi-argument function</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function<span style="color: rgb(249, 145, 87);">(x, y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y;</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div>
+<div class="fragment" style="margin: 50px 0px;" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>when curried, will become</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+    </div>
+</div>
+<div class="fragment" data-fragment-index="1">
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>a chain of functions, each</b>
+        </p>
+        <p style="text-align: right;">
+        <b>with a single argument</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function<span style="color: rgb(249, 145, 87);">(x)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return function<span style="color: rgb(249, 145, 87);">(y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y;</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; };</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(20, 98, 135); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>if we give them names</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">f<span style="color: rgb(249, 145, 87);">(x, y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y;</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+<p>
+<br></p>
+        <p style="text-align: right;">
+        <b>then...</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+    <p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">g<span style="color: rgb(249, 145, 87);">(x)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return function<span style="color: rgb(249, 145, 87);">(y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y;</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; };</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+        <p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">f(<span style="color: rgb(249, 145, 87);">1</span>, <span style="color: rgb(249, 145, 87);">2</span>) === g(<span style="color: rgb(249, 145, 87);">1</span>)(<span style="color: rgb(249, 145, 87);">2</span>);</p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(20, 98, 135); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>now, since functions are</b>
+        </p>
+        <p style="text-align: right;">
+        <b>first-class citizens...</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+    </div>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+<p>
+<br></p>
+        <p style="text-align: right;">
+        <b>we can also do it</b>
+        </p>
+        <p style="text-align: right;">
+        <b>like this</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+<p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">g<span style="color: rgb(249, 145, 87);">(h)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return function<span style="color: rgb(249, 145, 87);">(y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span>&nbsp;h(h(y));</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; };</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+<p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(249, 145, 87);">81</span> === g(<span style="color: rgb(204, 153, 204);">function<span style="color: rgb(249, 145, 87);">(x)</span>
+</span>
+ {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x * x;</p>
+<p style="text-align: left; font-weight: bold;">})(<span style="color: rgb(249, 145, 87);">3</span>);</p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(115, 37, 91); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">g<span style="color: rgb(249, 145, 87);">(h)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return function<span style="color: rgb(249, 145, 87);">(y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span>&nbsp;h(h(y));</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; };</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%;">
+        <p>
+<br></p>
+        <p style="text-align: right;">
+        <b>if we only supply</b>
+        </p>
+        <p style="text-align: right;">
+<b>one of the arguments</b>
+        </p>
+        <p style="text-align: right;">
+        <b>to the curried function...</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block; vertical-align: bottom;">
+        <p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">var </span>n = g(<span style="color: rgb(204, 153, 204);">function<span style="color: rgb(249, 145, 87);">(x)</span>
+        </span>
+        {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x * x;</p>
+        <p style="text-align: left; font-weight: bold;">});</p>
+    </div>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%;">
+<p>
+<br></p>
+        <p style="text-align: right;">
+        <b>we'll be able to reuse it</b>
+        </p>
+        <p style="text-align: right;">
+        <b>like this</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block; vertical-align: bottom;">
+<p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(249, 145, 87);">337</span> === n(<span style="color: rgb(249, 145, 87);">3</span>) + n(<span style="color: rgb(249, 145, 87);">4</span>);
+        </p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><p>
+<b>This is called</b>
+</p>
+<p>
+<br></p>
+<h2>
+<b>
+Partial Application
+</b>
+</h2>
+<p>
+<br></p>
+<div class="fragment" data-fragment-index="0">
+<div style="background-color: rgb(115, 37, 91); width: 400%; height: 200%; position: absolute; top: 70%; left: -100%; z-index: -1;">
+</div>
+<p>
+<b>and is not the same with currying</b>
+</p>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(115, 37, 91); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+    <p style="text-align: right;">
+    <b>actually, for functions with</b>
+    </p>
+    <p style="text-align: right;">
+    <b>an arity greater than 2</b>
+    </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">f<span style="color: rgb(249, 145, 87);">(x, y, z)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y + z;</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%;">
+    <p><br></p>
+        <p style="text-align: right;">
+        <b>the correct way to</b>
+        </p>
+        <p style="text-align: right;">
+        <b>partially apply is through</b>
+        </p>
+        <p style="text-align: right;">
+        <b>bind()</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block; vertical-align: bottom;">
+    <p><br></p>
+        <p style="text-align: left; font-weight: bold;">
+<span style="color: rgb(204, 153, 204);">var </span>f1 = f.bind(<span style="color: rgb(249, 145, 87);">null</span>, <span style="color: rgb(249, 145, 87);">1</span>);</p>
+    </div>
+</div>
+<div class="fragment" data-fragment-index="1">
+    <div style="width: 50%; display: inline-block; margin-right: 5%;">
+<p>
+<br></p>
+        <p style="text-align: right;">
+        <b>call to a partially applied</b>
+        </p>
+        <p style="text-align: right;">
+        <b>function returns the result,</b>
+        </p>
+        <p style="text-align: right;">
+        <b>not another function down</b>
+        </p>
+        <p style="text-align: right;">
+        <b>the currying chain</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block; vertical-align: bottom;">
+<p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(249, 145, 87);">6</span> === f1(<span style="color: rgb(249, 145, 87);">2</span>, <span style="color: rgb(249, 145, 87);">3</span>);
+        </p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><p>
+<b>Now I guess we're
+</b>
+</p>
+<p>
+<b>
+<br></b>
+</p>
+<h2>
+<b>running low on time</b>
+</h2>
+<p>
+<b>
+<br></b>
+</p>
+<p>
+<b>so...</b>
+</p></section><section data-background-color="rgba( 50, 200, 90, 0.4 )" style="top: 350px; display: none;" class="has-light-background future" aria-hidden="true" hidden=""><h1 style="font-weight: bold;">One last bit</h1>
+<p>
+<br></p>
+<div class="fragment" data-fragment-index="0">
+<p style="text-align: left; font-weight: bold; margin-bottom: 10px;">that the reverse process of currying</p>
+<h2 style="text-align: left; font-weight: bold;">uncurrying</h2>
+</div>
+<div class="fragment" data-fragment-index="1">
+<p style="text-align: right; font-weight: bold;">is closely related with</p>
+<p style="text-align: right; font-weight: bold;">a more familiar concept</p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<div style="text-align: left; background-color: rgb(17, 17, 17); width: 400%; height: 400%; position: absolute; top: -150%; left: -150%; opacity: 0.8;">
+</div>
+<h2 style="font-weight: bold; position: absolute; top: 95%; right: 0px;">
+<font color="#af0">apply.</font>
+</h2>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><h1>
+    <b>Questions?</b>
+</h1>
+<p>
+<b>Nah, we're running outta time. Seriously.</b>
+</p>
+<p>
+<br></p>
+<p>
+<br></p>
+<p>
+<b>This slide can be found on
+</b>
+</p>
+<h2>
+<b>
+<a href="https://slid.es/gsklee" target="_blank" class="roll"><span data-title="slid.es/gsklee">slid.es/gsklee</span></a>
+</b>
+</h2></section>
+				</div>

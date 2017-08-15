@@ -1,6 +1,6 @@
 # Vue talk
 
-Whenever at a talk, after hearing something discussed my most first 
+Whenever at a talk, after hearing something discussed my first 
 question is: "So how do I use it?" Sadly, often there is no answer. After 
 hearing great things about this or that technology, now I have to go back to some 
 other resource to figure out how exactly to get it to work.
@@ -31,14 +31,14 @@ Jay Kelkar <jkelkar@gmail.com>
 
 ### Example code: (slides contain reference to examples)
 ```
-00: Basic HTML set up which forms the basis of the rest of the code
+00: Basic HTML setup - forms the basis for the rest of the code
 01: Basic minimum Vue example - complete but trivial
 02: v-model two way binding example
 03: v-bind and v-on one way binding replacement for above
 04: v-bind with checkboxes and radio buttons
 05: event handling, conditionals and style binding
-06: Inline components a simple example
-07: List rendering of list and object
+06: Inline components - a simple example
+07: List rendering - list and object
 08: Style binding in a component
 09: Components with props and custom events
 

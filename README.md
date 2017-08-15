@@ -58,7 +58,7 @@ The examples:
 08: Style binding in a component
 09: Components with props and custom events
 
-ex01: Example of self paced learning - for AALR technician class exam
+ex01: Example of self paced learning - for ARRL technician class exam
 
 
 ```
